@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 const Cita = ({cita, removeCita}) => {
 
@@ -18,5 +19,10 @@ const Cita = ({cita, removeCita}) => {
             >Eliminar &times;</button>
           </div>
   };
+
+Cita.propTypes = {
+  cita: PropTypes.object.isRequired,
+  removeCita: PropTypes.func.isRequired,
+}
  
 export default Cita;
