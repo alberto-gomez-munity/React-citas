@@ -17,6 +17,9 @@ function App() {
     setCitas(newCitas)
   }
 
+
+  const titulo = (citas.length > 0 ? 'Administra tus citas' : 'No hay citas')
+
   return (
     <Fragment>
       <h1>Administrador de citas</h1>
@@ -28,7 +31,8 @@ function App() {
             />
           </div>
           <div className="one-half column">
-            <h2>Administra tus citas</h2>
+
+            <h2>{titulo}</h2>
             {citas.map( cita => (
               <Cita cita={cita} key={cita.id} removeCita={removeCita} />
             ))}
